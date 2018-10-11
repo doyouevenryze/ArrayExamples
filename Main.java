@@ -42,23 +42,37 @@ class Main
          *          Copy the elements of ar1 into ar2.
          */
         System.out.println("*** PRINTING ar2 ***");
-        int[] ar2 = ar1.clone();
-        for (int i = 0 ; i<n; i++)
-            ar2[i]=i;
+        int[] ar2;
+           
         
-        for (int i=0;i<n;i++)
-        System.out.println("ar2[" + i + "] = " + ar2[i]);
+        // 
+        // ar2 = ar1.clone() also does this
+        // ar2 = ar1, just copies the address so you are not copying the array
+        //
+        ar2= new int[ ar1.length ]; // sets the size of the array to equal ar1.
+        for (int i=0 ; i<ar2.length ; i++)
+        {
+            ar2[i]=ar1[i];
+        }
         
+        //                      ar2[    i    ] =   i    
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2[" + i + "] = "+ar2[i]);
+        //                      ar2[    i    ] =   i
         
         
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
-        System.out.println("*** PRINTING ar3 ***");
-        for (int i=0;i<n;i++)
-        System.out.println("ar1[" + i + "] = " + (ar1[i]+1));
-
-        
+        System.out.println("** Task 3 **");
+        int value;
+        for (int i=0 ; i<ar1.length ; i++)
+        {
+            ar1[i] =  ar1[i] +1;
+        }
+        for (int i=0 ; i<ar1.length ; i++)
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
+        //   
         
         /*
          * task 4. Create a new array called ar3.
@@ -67,8 +81,20 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
-        int[] ar3 = ar1.clone();
+        System.out.println("** test 4 **");
+        int[] ar3 = new int[ ar1.length *2 ];
+        for (int i=0 ; i< ar1.length ; i++)
+        {
+            ar3[i]=ar1[i];
+        }
         
+        for (int i=0 ; i<ar1.length ; i++)
+        {
+            ar3[i+ar1.length]=ar1[i];
+        }
+        
+        for (int i=0 ; i<ar3.length ; i++)
+            System.out.println("ar3[" + i + "] = "+ar3[i]);
         
         
         /*
