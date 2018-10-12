@@ -81,7 +81,7 @@ class Main
          *         ar1: 1 2 3
          *         ar3: 1 2 3 0 1 2 3
          */
-        System.out.println("** test 4 **");
+        System.out.println("** Task 4 **");
         int[] ar3 = new int[ ar1.length *2 ];
         for (int i=0 ; i< ar1.length ; i++)
         {
@@ -102,6 +102,18 @@ class Main
          *          print out the new ar1.  Then switch them back
          */
         
+        System.out.println("** Task 5 **");
+        int temp = ar1[0];
+        int temp2 = ar1[n-1];
+        ar1[0] = ar1[n-1];
+        ar1[n-1] = temp;
+        for (int i=0;i<n;i++)
+        System.out.println("ar1[" + i + "] = " + ar1[i]);
+        ar1[0] = ar1[n-1];
+        ar1[n-1] = temp;
+        
+        
+        
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
          * Task 6B: Print out just the odd numbers in ar1
@@ -109,6 +121,20 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("** Task 6A **");
+        for (int i = 1 ; i<ar1.length-1 ; i++)
+            System.out.println(ar1[i]);
+        
+        System.out.println("** Task 6B **");
+        for (int i = 0 ; i<ar1.length-1 ; i++)
+            if (ar1[i]%2==1)
+            System.out.println(ar1[i]);
+            
+        System.out.println("** Task 6C **");
+        for (int i = 0 ; i<ar1.length-1 ; i++)
+            if (ar1[i]%3==0)
+            System.out.println(ar1[i]);
+            
         
         /*
          * Task 7.  For each element in ar1, 
@@ -122,22 +148,37 @@ class Main
          *          ar[3]=4
          */
         
-         /*
-          * Task 8
-          *    Create an array called ar2odds
-          *    If the index of ar2 is odd, copy it to ar2odds.
-          *    If not, do not
-          *    ar2[0]=0
-          *    ar2[1]=1  ->  ar2odds[0]=1
-          *    ar2[2]=2
-          *    ar2[3]=3  ->  ar2odds[1]=3
-          */
-         
+        System.out.println("** Task 7 **");
+        for (int i = 0 ; i<ar1.length-1 ; i++)
+            if (ar1[i]%2==0)
+            System.out.println(ar1[i]);
+            else 
+            System.out.println((ar1[i])*10);
+        
+        
+        
+        /*
+         * Task 8
+         *    Create an array called ar2odds
+         *    If the index of ar2 is odd, copy it to ar2odds.
+         *    If not, do not
+         *    ar2[0]=0
+         *    ar2[1]=1  ->  ar2odds[0]=1
+         *    ar2[2]=2
+         *    ar2[3]=3  ->  ar2odds[1]=3
+         */
+        
+        System.out.println("** Task 8 **");
+        
+        
         /*
          * Task 9. In the array ar2, count how many odd numbers you
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
+        
+        System.out.println("** Task 9 **");
+        
         
         /*
          * Task 10.  Shift the elements of ar4 right by 1
@@ -146,11 +187,13 @@ class Main
          * new   ar4  9 1 3 5 7
          */
         
+        System.out.println("** Task 10 **");
         
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
         
+        System.out.println("** Task 11 **");
         
         /*
          * Task 12: 
@@ -175,6 +218,9 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
+        System.out.println("** Task 12 **");
+        
+        
         
         /*
          * Task 13
@@ -190,6 +236,8 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
+        System.out.println("** Task 13 **");
+        
         
          /*
           * Task 14
@@ -216,6 +264,6 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-        
+        System.out.println("** Task 14 **");
     }
 }
